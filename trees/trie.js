@@ -117,7 +117,8 @@ const stringFromNodes = (startNode) => {
     buffer.push(node.letter);
     node = node.parent;
   }
-  return buffer.reverse().join('');
+  buffer.reverse()
+  return buffer.join('');
 }
 
 module.exports = {
