@@ -57,11 +57,7 @@ function runTests() {
   words.forEach(word => trie.insert(word));
 
   const limitedWords = trie.wordsForPrefix('a');
-  console.log('limitedWords: ', limitedWords);
-  console.log('limitedWords.length: ', limitedWords.length);
   assert(limitedWords.length === 20, "wordsForPrefix should be limited to 20 results (MAX_COUNT).");
-  trie.printTrie();
-
 }
 
 // Run all tests
